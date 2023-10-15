@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Electronics - Online Shopping</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+        }
+        .top-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            
+        }
+        .search-bar-container {
+            flex: 1;
+            display: flex;
+            align-items: center; /* Vertically center-align items */
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .search-bar {
+            width: 60%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .my-account-link,
+        .my-cart-link {
+            text-decoration: none;
+            color: black;
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        .category-link {
+            width: calc(33.33% - 20px); /* 3 columns with a little spacing */
+            margin: 10px;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .category {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+            height: 300px; /* Fixed height for category boxes */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .category:hover {
+            transform: scale(1.05);
+        }
+
+        .category img {
+            
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            margin-bottom: 10px;
+        
+        }
+
+        .category-title {
+            font-weight: bold;
+        }
+        .categories-heading {
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            background-color: red;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .tagline{
+            text-align: center;
+            font-size: 25px;
+        }
+        .trending-heading {
+            text-align: center;
+            font-weight: bold;
+            color:white;
+            background-color: red;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product {
+        width: calc(33.33% - 20px); /* Display 3 products per row with spacing */
+        background-color: #f9f9f9;
+        padding: 20px;
+        margin-bottom: 20px;
+        margin-left: 110px;
+        margin-right: 110px; /* Add margin-right to create spacing between products */
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease-in-out;
+    }
+        
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>S.A Consumer Electronics Online Store</h1>
+        <p>*--Your one-stop store for the latest and best consumer electronics--*</p>
+    </header>
+    <div class="top-container">
+        <div class="search-bar-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        <a href="#" class="my-account-link">My Account</a>
+        <a href="#" class="my-cart-link">My Cart</a>
+    </div>
+    <h3 class="tagline">"Empowering Your Connected World. Explore, Shop, and Lead with S.A Consumer Electronics" </h3>
+    <h2 class="categories-heading">Products Categories</h2>
+    <div class="container">
+        
+        <a href="smartphones.html" class="category-link">
+            <div class="category">
+                <img src="C:\Users\saima\Desktop\WMAD\s23 ultra.jpg" alt="Smartphones">
+                <div class="category-title">Smartphones</div>
+            </div>
+        </a>
+        <a href="laptops.html" class="category-link">
+            <div class="category">
+                <img src="C:\Users\saima\Desktop\WMAD\lap.jpg" alt="Laptops">
+                <div class="category-title">Laptops</div>
+            </div>
+        </a>
+        <a href="hometheatres.html" class="category-link">
+            <div class="category">
+                <img src="C:\Users\saima\Desktop\WMAD\ht.jpg" alt="Home Theaters">
+                <div class="category-title">Home Theaters</div>
+            </div>
+        </a>
+        <a href="televisions.html" class="category-link">
+            <div class="category">
+                <img src="C:\Users\saima\Desktop\WMAD\sony.jpg" alt="Televisions">
+                <div class="category-title">Televisions</div>
+            </div>
+        </a>
+          <a href="televisions.html" class="category-link">
+            <div class="category">
+                <img src="C:\Users\saima\Desktop\WMAD\sonyc.jpg" alt="Cameras">
+                <div class="category-title">Cameras</div>
+            </div>
+        </a>
+            <a href="televisions.html" class="category-link">
+            <div class="category">
+                <img src="C:\Users\saima\Desktop\WMAD\watch.jpg" alt="Smart Watches">
+                <div class="category-title">Smart Watches</div>
+            </div>
+        </a>
+              <a href="televisions.html" class="category-link">
+            <div class="category">
+                <img src="C:\Users\saima\Desktop\WMAD\tab.jpg" alt="Tablets">
+                <div class="category-title">Tablets</div>
+            </div>
+        </a>
+                <a href="televisions.html" class="category-link">
+            <div class="category">
+                <img src="C:\Users\saima\Desktop\WMAD\projector1.jpg" alt="Projectors">
+                <div class="category-title">Projectors</div>
+            </div>
+        </a>
+                  <a href="televisions.html" class="category-link">
+            <div class="category">
+                <img src="C:\Users\saima\Desktop\WMAD\ps5.jpg" alt="Consoles">
+                <div class="category-title">Consoles</div>
+            </div>
+        </a>
+        </div>
+
+        <!-- Product List -->
+        <h2 class="trending-heading">Trending Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\Sam S23 ult.jpg" alt="Smartphone 1">
+                <div class="product-title">Samsung S23 Ultra</div>
+                <div class="product-description">(Phantom Black, 12GB, 256GB Storage)</div>
+                <div class="product-price">Rs.1,12,999</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\15 pro max.jpeg" alt="Smartphone 2">
+                <div class="product-title">Iphone 15 pro max</div>
+                <div class="product-description">(White Titanium, 256GB Storage)</div>
+                <div class="product-price">Rs.1,69,999</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>    
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\oneplus 11.jpg" alt="Smartphone 3">
+                <div class="product-title">One Plus 11</div>
+                <div class="product-description">(Titan Black, 16GB RAM, 256GB Storage)</div>
+                <div class="product-price">Rs.61,999</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\iqoo 11.jpg" alt="Smartphone 4">
+                <div class="product-title">Iqoo 11</div>
+                <div class="product-description">(Legend, 8GB RAM, 256 GB Storage)</div>
+                <div class="product-price">Rs.49,999</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\mi tv.jpg" alt="Smart TV 1">
+                <div class="product-title">Xiaomi 4K Ultra HD Smart Android OLED TV</div>
+                <div class="product-description">55 inches (Black)</div>
+                <div class="product-price">Rs.74,999</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\vu.jpg" alt="Smart TV 2">
+                <div class="product-title">Vu 4K Ultra HD Android QLED TV</div>
+                <div class="product-description">55 inches (Armani Gold)</div>
+                <div class="product-price">Rs.59,999</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\tuf.jpg" alt="Laptop 1">
+                <div class="product-title">ASUS TUF Gaming F15 Gaming Laptop</div>
+                <div class="product-description">Intel i5-11th Gen, 15.6-inch FHD 144Hz, (8GB/512GB SSD/4GB RTX 2050 Black 2.30 kg)</div>
+                <div class="product-price">Rs.55,990</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\dell.jpg" alt="Laptop 2">
+                <div class="product-title">Dell G15 5520 Gaming Laptop</div>
+                <div class="product-description">Intel i5-12th Gen, 15.6 inch FHD, (8GB/1TB/4GB RTX 3050 Dark Shadow Grey 2.81kg)</div>
+                <div class="product-price">Rs.72,990</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\5.1.jpg" alt="Home Theater 1">
+                <div class="product-title">ZEBRONICS Zeb-Juke BAR 9500WS PRO Dolby 5.1 soundbar</div>
+                <div class="product-description">525 Watts Output Power, 16.5cm subwoofer,Black</div>
+                <div class="product-price">Rs.10,998</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\jbl 5.1.jpg" alt="Home Theater 2">
+                <div class="product-title">JBL Bar 5.1</div>
+                <div class="product-description"> 510 Watts Output Power, 25cm subwoofer,Black</div>
+                <div class="product-price">Rs.44,999</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\alpha2.jpg" alt="Camera">
+                <div class="product-title">Sony Alpha II Full-Frame 24.2MP Mirrorless DSLR Camera</div>
+                <div class="product-description">28-70mm Zoom Lens 4K Full Frame, Real-Time Eye Auto Focus</div>
+                <div class="product-price">Rs.1,12,999</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\ser 9.jpg" alt="SmartWatch1">
+                <div class="product-title">Apple watch series 9</div>
+                <div class="product-description"> [GPS + Cellular 45mm] </div>
+                <div class="product-price">Rs.75,900</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\watch se.jpg" alt="SmartWatch2">
+                <div class="product-title">Apple Watch SE (2nd Gen)</div>
+                <div class="product-description"> [Cellular 44mm] </div>
+                <div class="product-price">Rs.22,900</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\tabs9.jpg" alt="Tablet1">
+                <div class="product-title">Samsung Galaxy Tab S9</div>
+                <div class="product-description"> 11 inch 12 GB,256 GB Wi-Fi Tablet, Gray </div>
+                <div class="product-price">Rs.83,999</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\watch se.jpg" alt="Tablet2">
+                <div class="product-title">OnePlus Pad</div>
+                <div class="product-description"> 8GB RAM,128GB Storage 144 HZ, Green </div>
+                <div class="product-price">Rs.34,599</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\PS 5.jpg" alt="Console1">
+                <div class="product-title">Sony PS5 PlayStation Console</div>
+                <div class="product-description"> Disc Version </div>
+                <div class="product-price">Rs.48,199</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\saima\Desktop\WMAD\xbox.jpg" alt="Console2">
+                <div class="product-title">XBOX Series X</div>
+                <div class="product-description"> Disc Version </div>
+                <div class="product-price">Rs.48,979</div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Add more products here -->
+        </div>
+    </div>
+    <script>
+        // JavaScript for parsing the page
+
+        // Function to handle image click
+        function handleImageClick(event) {
+            const imageSrc = event.target.src;
+
+            // Create an alert to show the image source
+            alert('You clicked on an image. Image source: ' + imageSrc);
+        }
+
+        // Get all product images
+        const productImages = document.querySelectorAll('.product img');
+
+        // Add a click event listener to each product image
+        productImages.forEach((image) => {
+            image.addEventListener('click', handleImageClick);
+        });
+    </script>
+</body>
+</html>
