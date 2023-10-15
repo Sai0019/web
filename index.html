@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.A Consumer Electronics</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            background-color: white;
+            width: 500px;
+            margin: 200px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 94%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .remember-me {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .forgot-password {
+            display: inline-block;
+            float: right;
+        }
+
+        .login-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 40px; /* Increase button length */
+            border-radius: 5px;
+            cursor: pointer;
+            display: block; /* Make the button full width */
+            margin: 15px auto; /* Center the button */
+        }
+
+        .login-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 40px; /* Increase button length */
+            border-radius: 5px;
+            cursor: pointer;
+            display: block; /* Make the button full width */
+            margin: 15px auto; /* Center the button */
+            text-align: center; /* Center text within the button */
+            text-decoration: none; /* Remove underline for anchor tag */
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+        .social-icons a img {
+            width: 30px; /* Adjust the width as needed */
+            height: 30px; /* Adjust the height as needed */
+            vertical-align: middle;
+        }
+
+        .social-icons a:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <img class="background-image" src="C:\Users\saima\Desktop\WMAD\website.jpg" alt="Background Image">
+    <div class="container">
+        <div class="title">S.A Consumer Electronics</div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <label class="remember-me">
+                <input type="checkbox"> Remember me
+            </label>
+            <a href="forgot.html" class="forgot-password">Forgot Password?</a>
+        </div>
+        <button id="login-button" class="login-button">Login</button>
+        <div class="social-icons">
+            <a href="#"><img src="C:\Users\saima\Desktop\WMAD\google.png" alt="Google"></a>
+            <a href="#"><img src="C:\Users\saima\Desktop\WMAD\facebook.jpeg" alt="Facebook"></a>
+            <a href="#"><img src="C:\Users\saima\Desktop\WMAD\t3.png" alt="Twitter"></a>
+        </div>
+        <p style="text-align: center;">New customer!!! <a href="Signup.html">Signup now</a></p>
+    </div>
+    <script>
+        // JavaScript for form validation and login attempts
+        const loginButton = document.getElementById("login-button");
+        const maxAttempts = 3;
+        let attempts = 0;
+
+        loginButton.addEventListener("click", () => {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Add your logic for checking the username and password here
+            // For example, you can compare them with stored user credentials
+
+            if (username === "admin" && password === "admin") {
+                alert("Login successful!");
+                // Redirect to the home page or perform further actions
+            } else {
+                attempts++;
+                alert("Login failed,Username and Password must be filled. Attempts remaining: " + (maxAttempts - attempts));
+                if (attempts >= maxAttempts) {
+                    loginButton.disabled = true;
+                    alert("Maximum login attempts reached. Please try again later.");
+                }
+            }
+        });
+    </script>
+</body>
+</html>
