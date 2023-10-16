@@ -18,30 +18,67 @@
             padding: 20px 0;
         }
 
-        .container {
-            width: 80%;
-            margin: 20px auto;
+        .cart-items {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
 
-        .cart-message {
-            text-align: center;
-            font-size: 20px;
-            margin-top: 20px;
+        .cart-product {
+            width: calc(33.33% - 20px);
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-left: 110px;
+            margin-right: 110px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
         }
 
-        .shop-now {
-            text-align: center;
-            font-size: 20px;
-            margin-top: 20px;
+        .cart-product:hover {
+            transform: scale(1.05);
         }
 
-        .shop-now a {
-            text-decoration: none;
+        .cart-product img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .cart-product-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .cart-product-description {
+            margin-bottom: 10px;
+        }
+
+        .cart-product-price {
             color: #ff0000;
             font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .cart-total {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .pay-now-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -49,9 +86,75 @@
     <header>
         <h1>Your Shopping Cart</h1>
     </header>
-    <div class="container">
-        <p class="cart-message">Your shopping cart is empty.</p>
-        <p class="shop-now">Shop now <a href="home.html">here</a>.</p>
+    <div class="cart-items">
+        <!-- Cart items will be displayed here -->
     </div>
+    <div class="cart-total">
+        <!-- Total price will be displayed here -->
+    </div>
+    <a href="pymt.html" class="pay-now-button">Pay Now</a>
+    <script>
+        // JavaScript for handling the shopping cart logic
+
+        // Define an array to store the products in the cart
+        let cart = [];
+
+        // Function to display the cart items and calculate the total price
+        function displayCart() {
+            const cartItems = document.querySelector('.cart-items');
+            const cartTotal = document.querySelector('.cart-total');
+
+            // Clear the previous content
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            // Loop through the cart array and display each item
+            cart.forEach((item) => {
+                const product = document.createElement('div');
+                product.classList.add('cart-product');
+
+                const productImage = document.createElement('img');
+                productImage.src = item.image;
+
+                const productTitle = document.createElement('div');
+                productTitle.innerText = item.title;
+
+                const productPrice = document.createElement('div');
+                productPrice.innerText = 'Price: Rs.' + item.price;
+
+                product.appendChild(productImage);
+                product.appendChild(productTitle);
+                product.appendChild(productPrice);
+
+                cartItems.appendChild(product);
+
+                total += item.price;
+            });
+
+            // Display the total price
+            cartTotal.innerText = 'Total: Rs.' + total;
+        }
+
+        // Check if there are items in the cart
+        function checkCart() {
+            const cartItems = document.querySelector('.cart-items');
+            if (cart.length === 0) {
+                cartItems.innerText = 'No products added to the cart.';
+            }
+        }
+
+        // Retrieve the cart data from local storage
+        function loadCart() {
+            const cartData = localStorage.getItem('cart');
+            if (cartData) {
+                cart = JSON.parse(cartData);
+                displayCart();
+                checkCart();
+            }
+        }
+
+        // Load the cart when the page loads
+        loadCart();
+    </script>
 </body>
 </html>
