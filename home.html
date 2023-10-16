@@ -395,6 +395,34 @@
         productImages.forEach((image) => {
             image.addEventListener('click', handleImageClick);
         });
+        let cart = [];
+
+    // Function to handle adding a product to the cart
+    function addToCart(event) {
+        const product = event.target.closest('.product');
+        const image = product.querySelector('img').src;
+        const title = product.querySelector('.product-title').innerText;
+        const price = parseFloat(product.querySelector('.product-price').innerText.replace('Rs.', '').replace(',', ''));
+
+        // Add the product to the cart array
+        cart.push({ image, title, price });
+
+        // Save the cart array to local storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Alert the user that the product has been added to the cart (you can customize this message)
+        alert('Product added to the cart!');
+
+        // You can also update the cart total or any other UI elements here
+    }
+
+    // Get all "Add to Cart" buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+
+    // Add a click event listener to each "Add to Cart" button
+    addToCartButtons.forEach((button) => {
+        button.addEventListener('click', addToCart);
+    });
     </script>
 </body>
 </html>
