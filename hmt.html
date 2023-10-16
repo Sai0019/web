@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: red;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .trending-heading {
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            background-color: red;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            width: calc(33.33% - 20px); /* Display 3 products per row with spacing */
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-left: 110px;
+            margin-right: 110px; /* Add margin-right to create spacing between products */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>HomeThraters</h1>
+   
+    <div class="product-list">
+        <!-- Add your smartphone products here (similar structure to the home page) -->
+        <!-- Replace "image_url," "Product Title," "Product Description," and "Product Price" with actual data -->
+        <div class="product">
+            <img src="5.1.jpg" alt="Home Theater 1">
+            <div class="product-title">ZEBRONICS Zeb-Juke BAR 9500WS PRO Dolby 5.1 soundbar</div>
+            <div class="product-description">525 Watts Output Power, 16.5cm subwoofer,Black</div>
+            <div class="product-price">Rs.10,998</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="jbl 5.1.jpg" alt="Home Theater 2">
+            <div class="product-title">JBL Bar 5.1</div>
+            <div class="product-description"> 510 Watts Output Power, 25cm subwoofer,Black</div>
+            <div class="product-price">Rs.44,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="bthm.jpg" alt="Home Theater 3">
+            <div class="product-title">Boat 3150Dr</div>
+            <div class="product-description">260 Watts Output Power, 12.5cm subwoofer,Black</div>
+            <div class="product-price">Rs.14,998</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="jb4.jpg" alt="Home Theater 4">
+            <div class="product-title">JBL Cinema SB241</div>
+            <div class="product-description"> 110 Watts Output Power, 15cm subwoofer,Black</div>
+            <div class="product-price">Rs.6,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+
+        <!-- Repeat the above structure for other smartphone products -->
+    </div>
+</body>
+</html>

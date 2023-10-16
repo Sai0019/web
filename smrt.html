@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: red;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .trending-heading {
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            background-color: red;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            width: calc(33.33% - 20px); /* Display 3 products per row with spacing */
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-left: 110px;
+            margin-right: 110px; /* Add margin-right to create spacing between products */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Smartphones</h1>
+   
+    <div class="product-list">
+        <!-- Add your smartphone products here (similar structure to the home page) -->
+        <!-- Replace "image_url," "Product Title," "Product Description," and "Product Price" with actual data -->
+        <div class="product">
+            <img src="Sam S23 ult.jpg" alt="Smartphone 1">
+            <div class="product-title">Samsung S23 Ultra</div>
+            <div class="product-description">(Phantom Black, 12GB, 256GB Storage)</div>
+            <div class="product-price">Rs.1,12,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="15 pro max.jpeg" alt="Smartphone 2">
+            <div class="product-title">Iphone 15 pro max</div>
+            <div class="product-description">(White Titanium, 256GB Storage)</div>
+            <div class="product-price">Rs.1,69,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>    
+        <div class="product">
+            <img src="oneplus 11.jpg" alt="Smartphone 3">
+            <div class="product-title">One Plus 11</div>
+            <div class="product-description">(Titan Black, 16GB RAM, 256GB Storage)</div>
+            <div class="product-price">Rs.61,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="iqoo 11.jpg" alt="Smartphone 4">
+            <div class="product-title">Iqoo 11</div>
+            <div class="product-description">(Legend, 8GB RAM, 256 GB Storage)</div>
+            <div class="product-price">Rs.49,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="14 pro max.jpg" alt="Smartphone 5">
+            <div class="product-title">14 Pro Max</div>
+            <div class="product-description">(Gold, 256 GB Storage)</div>
+            <div class="product-price">Rs.1,39,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="zfold 5.jpg" alt="Smartphone 6">
+            <div class="product-title">Galazy ZFold 5</div>
+            <div class="product-description">(Blue, 8GB RAM, 256 GB Storage)</div>
+            <div class="product-price">Rs.89,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="zflip5.jpg" alt="Smartphone 7">
+            <div class="product-title">Galazy zflip5 5</div>
+            <div class="product-description">(Green, 8GB RAM, 256 GB Storage)</div>
+            <div class="product-price">Rs.79,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="s23.jpg" alt="Smartphone 8">
+            <div class="product-title">Galazy S23</div>
+            <div class="product-description">(Pink, 8GB RAM, 256 GB Storage)</div>
+            <div class="product-price">Rs.59,999</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        
+
+        <!-- Repeat the above structure for other smartphone products -->
+    </div>
+</body>
+</html>
